@@ -41,16 +41,16 @@ export default function App() {
   }
   return (
     <>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
     <Navbar title="Texta" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert} />
     <div className="container my-3">
-    {/* {/* <Routes>}*/ }
-     <TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/>
-          {/* <Route path="/" element={<TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/>}/> */}
-    {/* <Route path="/about" element={} /> */}
-     {/* </Routes> */}
-    {/* // </BrowserRouter> */} <About mode={mode} />
+      <Routes>
+     {/* <TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/> */}
+          <Route path="/" element={<TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/>}/>
+    <Route path="/about" element={<About mode={mode}/>}/>
+     </Routes>
     </div>
+    </BrowserRouter>
     </> 
   )}
