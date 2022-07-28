@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 // import {
 //   Route,
 //   Routes,
@@ -23,7 +23,7 @@ export default function App() {
     )
     setTimeout(() => {
       setAlert(null)
-    }, 2500);
+    }, 3000);
   }
   const toggleMode = ()=>{
     if(mode === 'light'){
@@ -35,7 +35,7 @@ export default function App() {
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      showAlert("light mode enabled","success");
+      showAlert("Light mode enabled","success");
       document.title="Texta-Light mode"
     } 
   }
@@ -47,6 +47,7 @@ export default function App() {
     <div className="container my-3">
     {/* <Routes> */}
     <TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/>
+    <About mode ={mode}/>
           {/* <Route path="/home" element={<TextForm showAlert={showAlert} heading="Try Texta - word counter, character counter, remove extra spaces" mode={mode}/>}/> */}
     {/* <Route path="/about" element={} /> */}
     {/* <About mode={mode} /> */}
